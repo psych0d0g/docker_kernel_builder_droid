@@ -1,6 +1,7 @@
 FROM archlinux:base-devel
 
 RUN pacman --noconfirm -Sy \
+    busybox \
     bc \
     bash \
     cpio \
