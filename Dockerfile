@@ -11,7 +11,8 @@ RUN pacman --noconfirm -Sy \
     wget \
     python3 
 
-ADD https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman /usr/local/bin/antman
+RUN mkdir -o /tmp/antman
+ADD https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman /tmp/antman/antman
 
-RUN chmod +x /usr/local/bin/antman
-RUN /usr/local/bin/antman -S
+RUN chmod +x /tmp/antman/antman
+RUN /tmp/antman/antman -S
