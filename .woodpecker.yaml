@@ -1,0 +1,9 @@
+steps:
+  docker-build:
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      repo: harbor.crystalnet.org/${CI_REPO_OWNER}/hello
+      dockerfile: Dockerfile
+      registry: harbor.crystalnet.org
+      dry_run: true
+      output: type=oci,dest=${CI_REPO_OWNER}-hello.tar
