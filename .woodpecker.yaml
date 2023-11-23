@@ -2,8 +2,12 @@ steps:
   docker-build:
     image: woodpeckerci/plugin-docker-buildx
     settings:
-      repo: harbor.crystalnet.org/${CI_REPO_OWNER}/hello
+      repo: harbor.crystalnet.org/library/kernel_builder_droid
+      tags: latest
+      username: robot$library+woodpecker
       dockerfile: Dockerfile
       registry: harbor.crystalnet.org
       dry_run: true
       output: type=oci,dest=${CI_REPO_OWNER}-hello.tar
+      password:
+        from_secret: harbor_token
