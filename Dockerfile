@@ -11,8 +11,8 @@ RUN pacman --noconfirm -Sy \
     wget \
     python3 
 
-RUN mkdir -p /opt/antman
-RUN mkdir -p /opt/toolchains/neutron-clang
+RUN mkdir -p /opt/antman && \
+    mkdir -p /opt/toolchains/neutron-clang
 
 ADD https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman /opt/antman/antman
 
