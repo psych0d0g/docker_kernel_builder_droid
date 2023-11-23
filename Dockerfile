@@ -2,6 +2,7 @@ FROM archlinux:base-devel
 
 RUN pacman --noconfirm -Sy \
     bc \
+    bash \
     cpio \
     git \
     zip \
