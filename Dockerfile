@@ -11,6 +11,8 @@ RUN pacman --noconfirm -Sy \
     wget \
     python3 
 
+ADD rootfs/ /
+
 RUN mkdir -p /opt/antman && \
     mkdir -p /opt/toolchains/neutron-clang
 
