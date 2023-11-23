@@ -18,7 +18,7 @@ make ARCH=arm64 \
         OBJCOPY=llvm-objcopy \
         OBJDUMP=llvm-objdump \
         STRIP=llvm-strip \
-        -j$(nproc --all) | tee log.txt	                      
+        -j"$(nproc --all)" | tee log.txt	                      
         
         
 END=$(date +"%s")
