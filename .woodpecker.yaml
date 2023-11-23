@@ -7,7 +7,7 @@ steps:
       username: robot$library+woodpecker
       dockerfile: Dockerfile
       registry: harbor.crystalnet.org
-      dry_run: true
-      output: type=oci,dest=${CI_REPO_OWNER}-hello.tar
+      dry_run: false
+      output: type=oci,dest=kernel_builder_droid.tar
       password:
         from_secret: harbor_token
