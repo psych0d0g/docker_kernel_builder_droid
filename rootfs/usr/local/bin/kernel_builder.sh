@@ -8,7 +8,11 @@ export LD_LIBRARY_PATH="$/opt/glibc-2.36/bin:$LD_LIBRARY_PATH"
 START=$(date +"%s")
 
 make O=out CC=clang ARCH=arm64 psyche_defconfig
-		
+
+bash scripts/config \
+    --enable CONFIG_KPROBES \
+    --enable CONFIG_HAVE_KPROBES \
+    --enable CONFIG_KPROBE_EVENTS
 
 make ARCH=arm64 \
         O=out \
